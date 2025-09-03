@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>To-Do List Web App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="dev-popup.css">
+</head>
+<body>
+    <div class="app-name">
+        <img class="icon" src="images/todo-icon.png">
+        <div class="branding-text">
+            <h1>
+            <span class="tick">TICK</span>-<span class="track">TRACK</span>
+            </h1>
+            <p class="slogan">#Your Own Task Check-Mate</p>
+        </div>
+    </div>
+
+
+    <button class="login-popup" id="popup-btn">USER DETAILS</button>
+
+    <div class="popupMenu" id="popupMenu">
+    <div class="login-controls">
+        <div id="login">
+        <input class="username-box" type="text" id="username" placeholder="Enter username">
+        <p id="login-status">You are not logged in<br/>
+        </p>
+        <button id="login-btn" onclick="login(document.getElementById('username').value)">Login</button>
+        </div>
+        <div id="app" style="display:none;">
+        <p id="login-status">Welcome, you are logged in!<br/></p>
+        <button id="logout-btn" onclick="logout()">Logout</button>
+        </div>
+    </div>
+    </div>
+
+    <button class="dev-btn" id="dev-btn">DEV-INFO</button>
+
+    <div class="devpopup" id="devpopup">
+    <div class="modal">
+        <div class="modal-content">
+            <div class="top">DEV DIARIES</div>
+            <div class="mid">
+                <div class="row1">
+                    <div class="left">
+                    <img src="images/my-pic.jpg" alt="Avatar" class="avatar">
+                    <h4>Arkajyoti Banerjee</h4>
+                    <p style="white-space: pre; margin-top: 0px ; margin-bottom: 0px;">"He who imagines it,<br/>shall find a way to code it"<br/>
+        -self proclaimed quote</p>
+                    
+                    </div>
+                    <div class="right">
+                    <div class="aboutme">
+                        Born on Earth in the 21st century, 
+                        Mr. Banerjee always had a great enthusiasm for contributing actively to the code-verse. 
+                        This is his new venture in development, but he's already on a quest to learn from mistakes,
+                        wise seniors, fellow coders, and even all viewers. 
+                        When not fighting with semicolons, he enjoys dreaming up unique projects, binge-watching tutorials, 
+                        and occasionally pretending he understands regex.
+                        <br/>BUT more importantly , he appreciates your effort in viewing his project, which, though evolving ,
+                        took a lot of time and effort to be put together . 
+                        He extends his warm thanks.(And Hello To GDG Viewers!!)
+                    </div>
+                    
+                    <button class="close-btn">X</button>
+                    </div>
+                </div>
+                <div class="row2">
+                    💡Fun Facts:<br/>
+                    Banerjee loves Java over Python !!!!
+                </div>
+            </div>
+            <div class="bottom">
+                Contact Him:
+                <a href="https://www.linkedin.com/in/arkajyoti-banerjee-1a3ab1337/" target="_blank">
+                    <img src="images/linkedin.png">
+                    </a>
+                <a href="https://www.instagram.com/arkajyoti_banerjee/" target="_blank">
+                    <img src="images/insta.jpg">
+                    </a>
+                <a href="https://github.com/ArkajyotiBanerjee" target="_blank">
+                    <img src="images/github.png">
+                    </a>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+
+
+    <div class="container1">
+        <div class="main">
+            <h2>To Do List <img class="icon" src="images/todo-icon.png"></h2>
+            <div class="row1">
+                <input type="text" id="taskbox" placeholder="Add New Task">
+                <select id="priorityInput">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+                </select>
+
+                <button onclick="addTask()">Add</button>
+            </div>
+            <ul id="task-list">
+                <!-- <li>task1</li>
+                <li>task2</li>
+                <li>task3</li> -->
+            </ul>
+        </div>
+    </div>
+<script src="script.js"></script>
+<script src="script2.js"></script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+
+}
+html{
+    height: 100%;
+}
+body{
+    background-image: url("images/back.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+
+}
+.icon{
+    height: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.app-name{
+    display: flex;
+    align-items: center;
+    gap: 10px;         
+    border-right: 2px solid rgb(0,0,0); /* thickness & color */
+    padding-right: 15px;      
+    position: fixed;       
+    top: 15px;
+    left: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.branding-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centers slogan under the h1 */
+}
+
+.app-name .tick{
+    color: #2C3E50;
+}
+
+.app-name .track{
+    color: #E5E7EB;
+}
+
+.slogan {
+    font-style: italic;
+    color: #D1D5DB; /* lighter gray for subtle effect */
+}
+
+.popupMenu {
+  display: none;
+  position: fixed; 
+  top: 67px;  
+  right: 25px;
+  background: white;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+.main{
+    width: 100%;
+    max-width: 540px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px); /* blur background behind */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.463); /* soft shadow */
+    margin: 190px auto 20px;
+    padding: 40px 30px 70px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* subtle border */
+    border-radius: 15px;
+}
+.main h2{
+    color: rgb(78, 72, 110);
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px; 
+}
+.row1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(239, 236, 236);
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+taskbox.error {
+    border: 2px solid red;
+}
+
+button{
+    border: none;
+    outline: none;
+    padding: 15px 45px;
+    background: rgb(36, 14, 89);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+ul li{
+    list-style: none;
+    font-size: 16px;
+    padding: 14px 50px 14px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-image: url("images/uncheck-circle.png");
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+
+}
+ul li.checked{
+    color: rgba(0, 0, 0, 0.403);
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url("images/check-circle.png");
+}
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+}
+
+ul li span:hover {
+  background: rgb(36, 14, 89);
+  color: white;
+  border-radius: 50%;
+}
+
+
+#priorityInput {
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 0 10px;
+  background: #f0f0f0;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+li.low {
+  color: green;
+}
+
+li.medium {
+  color: orange;
+}
+li.high {
+  color: red;
+}
+
