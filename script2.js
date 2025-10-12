@@ -1,5 +1,6 @@
 const btn = document.getElementById('popup-btn');
   const popupMenu = document.getElementById('popupMenu');
+  const closebtn=document.getElementById("close-btn");
 
   
   btn.addEventListener('click', function (event) {
@@ -10,7 +11,7 @@ const btn = document.getElementById('popup-btn');
 
   // When clicking anywhere else → hide popup
   document.addEventListener('click', function (event) {
-    if (!popupMenu.contains(event.target) && !btn.contains(event.target)) {
+    if (!popupMenu.contains(event.target) && !btn.contains(event.target) || event.target==closebtn ) {
       popupMenu.style.display = 'none';
     }
   });
