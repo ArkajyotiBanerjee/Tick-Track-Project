@@ -1,6 +1,6 @@
 const btn = document.getElementById('popup-btn');
   const popupMenu = document.getElementById('popupMenu');
-  const closebtn=document.getElementById("close-btn");
+  
 
   
   btn.addEventListener('click', function (event) {
@@ -11,13 +11,14 @@ const btn = document.getElementById('popup-btn');
 
   // When clicking anywhere else → hide popup
   document.addEventListener('click', function (event) {
-    if (!popupMenu.contains(event.target) && !btn.contains(event.target) || event.target==closebtn ) {
+    if (!popupMenu.contains(event.target) && !btn.contains(event.target)) {
       popupMenu.style.display = 'none';
     }
   });
 
   const dev = document.getElementById('dev-btn');
   const modal = document.getElementById('devpopup');
+  const closebtn=document.getElementById("close-btn");
 
   
   dev.addEventListener('click', function (event) {
@@ -28,7 +29,7 @@ const btn = document.getElementById('popup-btn');
 
   // When clicking anywhere else → hide popup
   document.addEventListener('click', function (event) {
-    if (!modal.contains(event.target) && !dev.contains(event.target)) {
+    if (!modal.contains(event.target) && !dev.contains(event.target)  || event.target==closebtn ) {
       modal.style.display = 'none';
     }
   });
